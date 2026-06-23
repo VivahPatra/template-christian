@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion } from 'framer-motion'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -17,12 +17,13 @@ function getTimeLeft(target: Date) {
 }
 
 export default function CountdownSection() {
+  const weddingData = useWeddingData()
   const [time, setTime] = useState(() => getTimeLeft(weddingData.weddingDate))
 
   useEffect(() => {
     const id = setInterval(() => setTime(getTimeLeft(weddingData.weddingDate)), 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [weddingData.weddingDate])
 
   const units = [
     { label: 'Days',    value: time.days },

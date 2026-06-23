@@ -1,12 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function VenueSection() {
+  const weddingData = useWeddingData()
   return (
     <section id="venue" className="relative overflow-hidden py-28 px-6 font-serif" style={{ background: 'var(--color-surface2)', color: '#2a2420' }}>
       <FlowerOverlay />

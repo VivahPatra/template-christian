@@ -1,29 +1,36 @@
 'use client'
 import { motion } from 'framer-motion'
-import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
 import LotusDivider from '@/components/ui/LotusDivider'
+import EditableText from '@/components/ui/EditableText'
 
 export default function FooterSection() {
-  const weddingData = useWeddingData()
+  const { data: weddingData } = useEditMode()
   return (
     <footer id="footer" className="py-20 px-6 text-center font-serif" style={{ background: 'var(--color-surface2)', color: '#2a2420' }}>
       <div className="max-w-2xl mx-auto">
         <LotusDivider className="mb-10" />
 
         <p className="shimmer-text font-display mb-1" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)' }}>
-          {weddingData.brideName} &amp; {weddingData.groomName}
+          <EditableText field="brideName" tag="span">
+            {weddingData.brideName}
+          </EditableText>
+          {' '}&amp;{' '}
+          <EditableText field="groomName" tag="span">
+            {weddingData.groomName}
+          </EditableText>
         </p>
         <p className="font-sans text-xs tracking-[0.4em] uppercase mb-8" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
           20 December 2026
         </p>
 
-        <p className="font-serif italic text-sm mb-8" style={{ color: 'var(--color-muted)' }}>
+        <EditableText field="tagline" tag="p" className="font-serif italic text-sm mb-8" style={{ color: 'var(--color-muted)' }}>
           {weddingData.tagline}
-        </p>
+        </EditableText>
 
-        <p className="font-sans text-xs tracking-widest" style={{ color: 'var(--color-accent)', opacity: 0.5 }}>
+        <EditableText field="hashtag" tag="p" className="font-sans text-xs tracking-widest" style={{ color: 'var(--color-accent)', opacity: 0.5 }}>
           {weddingData.hashtag}
-        </p>
+        </EditableText>
 
         <LotusDivider className="mt-10" />
 

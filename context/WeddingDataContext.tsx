@@ -16,8 +16,15 @@ interface EditorFormData {
   weddingDate?: string
   hashtag?: string
   tagline?: string
+  heroSubtitle?: string
+  invitationHeading?: string
+  invitationSubtitle?: string
+  invitationBlessing?: string
   invitationText?: string
+  rsvpHeading?: string
+  rsvpText?: string
   heroImage?: string
+  infoCards?: Array<{ icon?: string; title?: string; description?: string }>
   bridePhoto?: string
   groomPhoto?: string
   backgroundMusic?: string
@@ -33,6 +40,7 @@ interface EditorFormData {
     venueMapLink?: string
     description?: string
     color?: string
+    image?: string
   }>
   coupleStory?: Array<{
     date: string
@@ -69,6 +77,13 @@ function mapEditorToConfig(editor: EditorFormData, base: WeddingConfig): Wedding
   merged.hashtag = str(editor.hashtag, base.hashtag) as string
   merged.tagline = str(editor.tagline, base.tagline) as string
   merged.invitationText = str(editor.invitationText, base.invitationText) as string
+  merged.heroSubtitle = str(editor.heroSubtitle, base.heroSubtitle) as string | undefined
+  merged.invitationHeading = str(editor.invitationHeading, base.invitationHeading) as string | undefined
+  merged.invitationSubtitle = str(editor.invitationSubtitle, base.invitationSubtitle) as string | undefined
+  merged.invitationBlessing = str(editor.invitationBlessing, base.invitationBlessing) as string | undefined
+  merged.rsvpHeading = str(editor.rsvpHeading, base.rsvpHeading) as string | undefined
+  merged.rsvpText = str(editor.rsvpText, base.rsvpText) as string | undefined
+  merged.rsvpDeadline = str(editor.rsvpDeadline, base.rsvpDeadline) as string | undefined
 
   // Media fields
   merged.heroImage = str(editor.heroImage, base.heroImage) as string
@@ -107,7 +122,7 @@ function mapEditorToConfig(editor: EditorFormData, base: WeddingConfig): Wedding
         time: str(editorEvent.time, baseEvent?.time || '') as string,
         venue: str(editorEvent.venue, baseEvent?.venue || '') as string,
         venueAddress: str(editorEvent.venueAddress, baseEvent?.venueAddress || '') as string,
-        image: baseEvent?.image,
+        image: str(editorEvent.image, baseEvent?.image || '') as string,
         color: str(editorEvent.color, baseEvent?.color || '#c8922a') as string,
         description: str(editorEvent.description, baseEvent?.description) as string | undefined,
       }

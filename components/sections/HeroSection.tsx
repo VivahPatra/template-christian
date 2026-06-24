@@ -2,13 +2,12 @@
 import { useRef } from 'react'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useEditMode } from '@/context/EditModeContext'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import { formatShortDate } from '@/lib/utils'
-import EditableText from '@/components/ui/EditableText'
 
 export default function HeroSection() {
-  const { data: weddingData } = useEditMode()
+  const weddingData = useWeddingData()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
 
@@ -80,16 +79,16 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-2">
-          <EditableText field="groomName" tag="h1" className="font-display leading-none" style={{ fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
+          <h1 className="font-display leading-none" style={{ fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
             {weddingData.groomName}
-          </EditableText>
+          </h1>
           <span className="block my-1 float-slow font-display"
             style={{ color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(1rem, 2.5vw, 1.8rem)' }}>
             &amp;
           </span>
-          <EditableText field="brideName" tag="h1" className="font-display leading-none" style={{ fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
+          <h1 className="font-display leading-none" style={{ fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
             {weddingData.brideName}
-          </EditableText>
+          </h1>
         </motion.div>
 
         <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-2">
@@ -100,9 +99,11 @@ export default function HeroSection() {
           <div className="h-px w-12 sm:w-16 md:w-24" style={{ background: 'linear-gradient(to left, transparent, rgba(255,255,255,0.5))' }} />
         </motion.div>
 
-        <EditableText field="tagline" tag="p" className="font-serif italic text-sm sm:text-base tracking-widest" style={{ color: 'rgba(255,255,255,0.6)' }}>
+        <motion.p variants={fadeUp}
+          className="font-serif italic text-sm sm:text-base tracking-widest"
+          style={{ color: 'rgba(255,255,255,0.6)' }}>
           {weddingData.tagline}
-        </EditableText>
+        </motion.p>
 
         <motion.div variants={fadeUp} className="mt-6 sm:mt-8 md:mt-14 flex flex-col items-center gap-2" style={{ opacity: 0.5 }}>
           <span className="font-sans text-[10px] tracking-[0.3em] uppercase" style={{ color: 'rgba(255,255,255,0.7)' }}>Scroll</span>

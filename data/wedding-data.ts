@@ -21,19 +21,19 @@ export const weddingData: WeddingConfig = {
   ],
 
   galleryImages: [
-    { src: '/assets/gallery/g1.jpg', alt: 'Couple photo 1', span: 'wide' },
-    { src: '/assets/gallery/g2.jpg', alt: 'Couple photo 2', span: 'tall' },
-    { src: '/assets/gallery/g3.jpg', alt: 'Couple photo 3', span: 'normal' },
-    { src: '/assets/gallery/g4.jpg', alt: 'Couple photo 4', span: 'normal' },
-    { src: '/assets/gallery/g5.jpg', alt: 'Couple photo 5', span: 'wide' },
-    { src: '/assets/gallery/g6.jpg', alt: 'Couple photo 6', span: 'normal' },
+    { src: '/assets/gallery/gallery-1.jpg', alt: 'Couple photo 1', span: 'wide' },
+    { src: '/assets/gallery/gallery-2.jpg', alt: 'Couple photo 2', span: 'tall' },
+    { src: '/assets/gallery/gallery-3.jpg', alt: 'Couple photo 3', span: 'normal' },
+    { src: '/assets/gallery/gallery-4.jpg', alt: 'Couple photo 4', span: 'normal' },
+    { src: '/assets/gallery/gallery-5.jpg', alt: 'Couple photo 5', span: 'wide' },
+    { src: '/assets/gallery/gallery-6.jpg', alt: 'Couple photo 6', span: 'normal' },
   ],
 
   coupleStory: [
-    { date: 'June 2020', title: 'A Chance Encounter', description: 'A beach bonfire in Goa, a shared playlist, and a conversation that lasted till sunrise. Neither wanted the night to end.', icon: '🔥', image: '/assets/story/s1.jpg' },
-    { date: 'December 2021', title: 'First Date', description: 'A candlelit dinner by the sea, the sound of waves and a promise whispered over dessert.', icon: '🌅', image: '/assets/story/s2.jpg' },
-    { date: 'July 2025', title: 'The Proposal', description: 'On a cliff overlooking the Arabian Sea at sunset, he got down on one knee. She cried. The dolphins celebrated.', icon: '💍', image: '/assets/story/s3.jpg' },
-    { date: 'February 2027', title: 'Forever Begins', description: 'A beach wedding, barefoot vows, and a lifetime of sunsets together. We can\'t wait to celebrate with everyone we love.', icon: '💒', image: '/assets/story/s4.jpg' },
+    { date: 'June 2020', title: 'A Chance Encounter', description: 'A beach bonfire in Goa, a shared playlist, and a conversation that lasted till sunrise. Neither wanted the night to end.', icon: '🔥', image: '/assets/story/story-1.jpg' },
+    { date: 'December 2021', title: 'First Date', description: 'A candlelit dinner by the sea, the sound of waves and a promise whispered over dessert.', icon: '🌅', image: '/assets/story/story-2.jpg' },
+    { date: 'July 2025', title: 'The Proposal', description: 'On a cliff overlooking the Arabian Sea at sunset, he got down on one knee. She cried. The dolphins celebrated.', icon: '💍', image: '/assets/story/story-3.jpg' },
+    { date: 'February 2027', title: 'Forever Begins', description: 'A beach wedding, barefoot vows, and a lifetime of sunsets together. We can\'t wait to celebrate with everyone we love.', icon: '💒', image: '/assets/story/story-4.jpg' },
   ],
 
   familyBride: [

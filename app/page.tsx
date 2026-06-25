@@ -16,6 +16,7 @@ import GallerySection from '@/components/sections/GallerySection'
 import RSVPSection from '@/components/sections/RSVPSection'
 import CountdownSection from '@/components/sections/CountdownSection'
 import FooterSection from '@/components/sections/FooterSection'
+import SectionGate from '@/components/ui/SectionGate'
 
 export default function Page() {
   const [loaded, setLoaded] = useState(false)
@@ -32,28 +33,44 @@ export default function Page() {
           <ParallaxLanterns />
           <div className="relative overflow-x-hidden">
             <main>
-              <HeroSection />
-              <ShowerDivider />
+              <SectionGate name="hero">
+                <HeroSection />
+                <ShowerDivider />
+              </SectionGate>
 
-              <InvitationSection />
-              <PondStrip />
+              <SectionGate name="invitation">
+                <InvitationSection />
+                <PondStrip />
+              </SectionGate>
 
-              <CoupleStory />
-              <PondStrip />
+              <SectionGate name="coupleStory">
+                <CoupleStory />
+                <PondStrip />
+              </SectionGate>
 
-              <GallerySection />
-              <PondStrip />
+              <SectionGate name="gallery">
+                <GallerySection />
+                <PondStrip />
+              </SectionGate>
 
-              <EventsSection />
-              <PondStrip />
+              <SectionGate name="events">
+                <EventsSection />
+                <PondStrip />
+              </SectionGate>
 
-              <RSVPSection />
-              <PondStrip />
+              <SectionGate name="rsvp">
+                <RSVPSection />
+                <PondStrip />
+              </SectionGate>
 
-              <CountdownSection />
-              <PondStrip />
+              <SectionGate name="countdown">
+                <CountdownSection />
+                <PondStrip />
+              </SectionGate>
 
-              <FooterSection />
+              <SectionGate name="footer">
+                <FooterSection />
+              </SectionGate>
             </main>
           </div>
         </>

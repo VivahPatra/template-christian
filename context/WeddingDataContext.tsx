@@ -187,6 +187,10 @@ function mapEditorToConfig(editor: EditorFormData, base: WeddingConfig): Wedding
     }
   }
 
+  if (editor.sections) {
+    merged.sections = editor.sections as Record<string, boolean>
+  }
+
   return merged
 }
 

@@ -74,7 +74,7 @@ export default function LoadingScreen({ onComplete }: Props) {
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           style={{ filter: 'drop-shadow(0 0 16px var(--color-glow-strong))' }}
         >
-          <span style={{ fontSize: 48, color: 'var(--color-accent)' }}>✝</span>
+          <span style={{ fontSize: 48, color: 'var(--color-accent)' }}>†</span>
         </motion.div>
       </div>
 

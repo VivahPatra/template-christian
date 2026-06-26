@@ -69,7 +69,7 @@ export default function HeroSection() {
       >
         <motion.p variants={fadeUp} className="text-3xl sm:text-4xl mb-2"
           style={{ color: 'rgba(255,255,255,0.85)', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.12))' }}>
-          ✝
+          †
         </motion.p>
 
         <motion.p variants={fadeUp}

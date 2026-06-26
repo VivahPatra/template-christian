@@ -48,7 +48,7 @@ export default function InvitationSection() {
           <div className="py-12 px-8 text-center" style={{ background: 'linear-gradient(135deg, var(--color-surface3), var(--color-surface))' }}>
             {/* Cross */}
             <div className="flex flex-col items-center mb-4">
-              <span className="text-4xl" style={{ color: 'var(--color-accent)', filter: 'drop-shadow(0 0 12px var(--color-glow-strong))' }}>✝</span>
+              <span className="text-4xl" style={{ color: 'var(--color-accent)', filter: 'drop-shadow(0 0 12px var(--color-glow-strong))' }}>†</span>
               <p className="font-sans text-xs tracking-[0.3em] uppercase mt-2" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
                 {weddingData.invitationBlessing || 'In the name of the Father, the Son & the Holy Spirit'}
               </p>

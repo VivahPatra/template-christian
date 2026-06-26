@@ -100,7 +100,7 @@ function EventNode({
         className="text-center mt-3 rounded-xl px-3 py-3"
         style={{
           maxWidth: 160,
-          background: 'var(--color-accent)',
+          background: 'var(--color-surface)',
           border: `1px solid ${color}33`,
           boxShadow: `0 0 14px ${color}1a`,
         }}
@@ -121,7 +121,7 @@ function EventNode({
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 mt-3 px-4 py-2 rounded-full font-sans text-xs font-semibold whitespace-nowrap tracking-wider transition-all hover:opacity-90"
-          style={{ background: 'var(--color-accent)', color: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
+          style={{ background: 'var(--color-surface)', color: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
         >
           📍 Get Directions
         </a>
@@ -138,7 +138,7 @@ export default function EventsSection() {
   const row2 = events.slice(half)
 
   return (
-    <section id="events" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-accent)' }}>
+    <section id="events" className="relative overflow-hidden py-28 px-6" style={{ background: 'var(--color-surface)' }}>
       <FlowerOverlay />
       <div className="max-w-5xl mx-auto">
         {/* Heading */}

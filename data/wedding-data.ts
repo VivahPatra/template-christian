@@ -14,7 +14,7 @@ export const weddingData: WeddingConfig = {
 
   events: [
     { id: 'rehearsal', name: 'Rehearsal Dinner', emoji: '🥂', date: 'February 12, 2027', time: '7:00 PM', venue: 'Seaside Pavilion', venueAddress: 'Baga Beach Road, Goa', image: '/assets/events/engagement.png', color: '#1a8a9a', description: 'An evening of laughter before the big day.' },
-    { id: 'mehendi', name: 'Mehendi Night', emoji: '🌿', date: 'February 13, 2027', time: '4:00 PM', venue: 'Beach Lawns', venueAddress: 'Calangute, Goa', image: '/assets/events/mehendi.png', color: '#e07050', description: 'Henna, music and sunset by the shore.' },
+    { id: 'mehendi', name: 'Opera Night', emoji: '🌿', date: 'February 13, 2027', time: '4:00 PM', venue: 'Beach Lawns', venueAddress: 'Calangute, Goa', image: '/assets/events/mehendi.png', color: '#e07050', description: 'Henna, music and sunset by the shore.' },
     { id: 'sangeet', name: 'Beach Party', emoji: '🎶', date: 'February 13, 2027', time: '8:00 PM', venue: 'Tito\'s Beachside', venueAddress: 'Baga Beach, Goa', image: '/assets/events/sangeet.png', color: '#4a90c0', description: 'Dance under the stars with sand between your toes.' },
     { id: 'ceremony', name: 'Holy Matrimony', emoji: '✝️', date: 'February 14, 2027', time: '11:00 AM', venue: 'Our Lady of the Sea Church', venueAddress: 'Fort Aguada Road, Goa', image: '/assets/events/wedding.png', color: '#d4a040', description: 'Two hearts united in faith and love.' },
     { id: 'reception', name: 'Beach Reception', emoji: '🌊', date: 'February 14, 2027', time: '6:00 PM', venue: 'Sunset Terrace Resort', venueAddress: 'Candolim Beach, Goa', image: '/assets/events/reception.png', color: '#e07050', description: 'A sunset celebration of love and joy.' },

@@ -27,7 +27,7 @@ export default function HeroSection() {
         }} />
         <div className="absolute inset-0 flex items-end justify-center pb-[18%] sm:pb-[7%] md:pb-[13%]">
           <img
-            src="/assets/christian.png"
+            src="/assets/christian.webp"
             alt=""
             className="w-[95%] sm:w-[55%] md:w-[50%]"
             style={{ height: 'auto', opacity: 1, mixBlendMode: 'overlay' }}

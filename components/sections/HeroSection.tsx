@@ -79,14 +79,14 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-2">
-          <h1 className="font-display leading-none" style={{ fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
+          <h1 className="font-display" style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)', lineHeight: 1.2, padding: '0.1em 0', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
             {weddingData.groomName}
           </h1>
           <span className="block my-1 float-slow font-display"
             style={{ color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(1rem, 2.5vw, 1.8rem)' }}>
             &amp;
           </span>
-          <h1 className="font-display leading-none" style={{ fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
+          <h1 className="font-display" style={{ fontSize: 'clamp(2rem, 6.5vw, 4.5rem)', lineHeight: 1.2, padding: '0.1em 0', color: '#fff', textShadow: '0 2px 20px rgba(0,0,0,0.12)' }}>
             {weddingData.brideName}
           </h1>
         </motion.div>
